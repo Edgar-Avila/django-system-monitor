@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Monitor del Sistema</title>
+  </head>
+  <body>
+    {% include "layout/navbar.html" %}
+    
+    <div class="container py-4">
+      <h1>Disco</h1>
+      <p>
+        El disco es el dispositivo de almacenamiento de datos que se utiliza para
+        guardar información de manera permanente. Las particiones son divisiones
+        lógicas de un disco que permiten organizar la información de manera más
+        eficiente. Se muestran los puntos de montado de las particiones del 
+        disco y su espacio disponible.
+      </p>
+      <button class="btn btn-primary" id="getBtn">Obtener información actualizada</button>
+      <div class="row" id="chartsContainer">
+        <div class="col-12 col-sm-6 col-md-4">
+          <canvas id="chart-"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="{% static 'disk.js' %}"></script>
+</html>
