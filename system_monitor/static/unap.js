@@ -12,7 +12,7 @@ const fillData = (data) => {
   studentInfo.innerHTML = `
     <p><strong>Nombre:</strong> ${data?.estudiante?.nombres}</p>
     <p><strong>Escuela:</strong> ${data?.estudiante?.escuela}</p>
-    <p><strong>Facultad:</strong> ${data?.estudiante?.dni}</p>
+    <p><strong>DNI:</strong> ${data?.estudiante?.dni}</p>
   `;
   if(data.status) {
     studentInfo.innerHTML += `<p><strong>Tiene deudas:</strong> Sí</p>`;
